@@ -1,0 +1,89 @@
+:root {
+  --lcyan: hsl(193, 38%, 86%);
+  --ngreen: hsl(150, 100%, 66%);
+  --gblue: hsl(217, 19%, 38%);
+  --dgblue: hsl(217, 19%, 24%);
+  --dblue: hsl(218, 23%, 16%);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  min-height: 100vh;
+  background: var(--dblue);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 54rem;
+  background: var(--dgblue);
+  padding: 5rem 5rem 7.5rem;
+  text-align: center;
+  border-radius: 10px;
+
+  position: relative;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  color: var(--ngreen);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+}
+
+.card__text {
+  font-size: 2.6rem;
+  color: var(--lcyan);
+  margin-bottom: 3rem;
+}
+
+img.hidden {
+  display: none;
+}
+
+.dice {
+  height: 6.5rem;
+  width: 6.5rem;
+  position: absolute;
+  border-radius: 50%;
+  background: var(--ngreen);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+}
+
+.dice:hover {
+  box-shadow: 0 0 50px 3px var(--ngreen);
+}
+
+.dice::before {
+  content: '';
+  position: absolute;
+  background: url(images/icon-dice.svg);
+  display: block;
+  height: 2.4rem;
+  width: 2.4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
